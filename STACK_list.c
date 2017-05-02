@@ -1,16 +1,12 @@
 #include <stdlib.h>
 #include "Item.h"
-#include "STACK.h"
 
-typedef struct STACKnode* link;
-
-struct STACKnode{
-    Item x;
-    link next;
+typedef struct STACKnode* link;struct STACKnode{
+    Item item;
+    link next; 
 };
 
 static link head;
-
 
 void STACKinit(int maxN){
     head = NULL;
@@ -29,7 +25,8 @@ Item STACKpop(void){
 }
 
 link insertFirst(Item n, link hd){
-    link t = makeNew(n);
+    link t = malloc(sizeof(Item));
+    t->item = n;
     t->next = hd;
     return t;
 }
