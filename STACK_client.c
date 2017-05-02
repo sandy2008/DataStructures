@@ -14,9 +14,9 @@ int main(void)
     STACKpush(40);
 
     x = STACKpop();
-    printf("%d",x);
+    printf("%d\n",x);
 
     STACKpush(50);
     x = STACKpop();
-    printf("%d",x);
+    printf("%d\n",x);
 }
