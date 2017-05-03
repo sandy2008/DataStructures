@@ -11,17 +11,23 @@ link LISTempty(void){
 Item LISThead(link hd){
     if (hd == NULL)
         return 0;
-    if()
-}
-
-link LISTtail(link){
 
 }
 
-link LISTcons(Item,link){
+link LISTtail(link hd){
+
 }
 
-int LISTlength(link){
+link LISTcons(Item n,link hd){
+    link newhd = malloc(sizeof(n));
+    newhd->item = n;
+    newhd->next = hd;
+    return newhd;
+    
+}
+
+int LISTlength(link hd){
+
 }
 
 void LISTprint(link hd){
@@ -29,11 +35,11 @@ void LISTprint(link hd){
         printf("No List");
     else{
          printf("[");
-         print("%d",hd->item);
+         printf("%d",hd->item);
          while(hd->next != NULL){
             hd = hd->next;
-            printf("%,d",hd->item);
-            printf("]\n");
+            printf(",%d",hd->item);
          }
+         printf("]\n");
 }
 }
