@@ -32,7 +32,7 @@ int LISTlength(link hd){
     int count = 0;
     if(hd == NULL) return count;
     else{
-    while(hd->next != NULL){
+    while(hd != NULL){
         count++;
         hd = hd->next;
     }
