@@ -13,3 +13,4 @@ BTlink newNode(char);
 BTlink BTcons(char, BTlink, BTlink);
 BTlink BTsubtree(BTlink, link);
 void BTprint(BTlink);
+int BTsize(BTLink);

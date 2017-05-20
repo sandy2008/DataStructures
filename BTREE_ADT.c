@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "BTREE.h"
-#include "LIST.h"
+
 
 BTlink newNode(char c){
    BTlink head = malloc(sizeof(*head));
@@ -50,3 +50,15 @@ void BTprint(BTlink tr){
    printf(")");
    return;
 }
+
+int BTsize(BTlink tr){
+    if (tr!=NULL)
+        if(tr->l==NULL&&tr->r==NULL)
+            return 1;
+    else
+        return BTsize(tr->l) + BTsize(tr->r);
+    if (tr==NULL)
+        return 0;
+}
+
+
