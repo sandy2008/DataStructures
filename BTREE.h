@@ -1,7 +1,9 @@
+#include "LIST.h"
+
 typedef struct BTnode* BTlink;
 
 struct BTnode{
-   char label;
+   char item;
    BTlink l;
    BTlink r;
 };  //Define BTlink

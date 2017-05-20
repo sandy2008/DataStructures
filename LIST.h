@@ -1,7 +1,9 @@
 #include "Item.h"
 
-typedef struct node *link;
+typedef struct node* link;
+
 struct node { Item item; link next; };
+
 link LISTempty(void);
 Item LISThead(link);
 link LISTtail(link);

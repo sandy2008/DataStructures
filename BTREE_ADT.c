@@ -1,11 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <BTREE.h>
-#include <LIST.h>
+#include "BTREE.h"
+#include "LIST.h"
 
 BTlink newNode(char c){
    BTlink head = malloc(sizeof(*head));
-   head->label = c;
+   head->item = c;
    head->l = NULL;
    head->r = NULL;
    return head;
