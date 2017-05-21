@@ -13,7 +13,6 @@ int evalTree(BTlink tr){
         return tr->l->label-tr->r->label;
     if (tr->label=='*')
         return tr->l->label*tr->r->label;
-
 }
 void main(void){
    BTlink treeOne = BTcons('1', NULL, NULL);
