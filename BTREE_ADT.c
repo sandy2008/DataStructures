@@ -129,13 +129,13 @@ char BTlabel(BTlink tr, link path){
 }
 
 link BTlongestPath(BTlink tr){
-    if(tr != NULL){
+    if(tr->l != NULL||tr->r != NULL){
             link leftPath = BTlongestPath(tr->l);
             link rightPath = BTlongestPath(tr->r);
-            if(LISTlength(leftPath)>LISTlength(rightPath))
-                return LISTcons(LISTlength(leftPath), LISTcons(0,LISTempty()));
+            if(LISTlength(leftPath)>=LISTlength(rightPath))
+                return LISTcons(0, leftPath);
             else
-                return LISTcons(LISTlength(rightPath), LISTcons(1,LISTempty()));
+                return LISTcons(1, rightPath);
     }
     else
         return LISTempty();

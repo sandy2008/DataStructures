@@ -1,58 +1,54 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "Item.h"
 #include "LIST.h"
 
-static link head;
+typedef int Item;
 
 link LISTempty(void){
-    return NULL;
+ return NULL;
 }
 
-Item LISThead(link hd){
-    if (hd == NULL)
-        return 0;
-    else
-        return hd->item;
+Item LISThead(link x){
+  if (x == NULL) return 0;
+  return x->item;
 }
 
-link LISTtail(link hd){
-    if(hd->next!=NULL)
-        return hd->next;
-    else
-	return NULL;
+link LISTtail(link x){
+   if (x == NULL) return NULL;
+  return x->next;
 }
 
-link LISTcons(Item n,link hd){
-    link newhd = malloc(sizeof(n));
-    newhd->item = n;
-    newhd->next = hd;
-    return newhd;
-
+link makeNew(Item item){
+ link x;
+ x = malloc(sizeof(*x));
+ x->item = item;
+ x->next = NULL;
+ return x;
 }
 
-int LISTlength(link hd){
-    int count = 0;
-    if(hd == NULL) return count;
-    else{
-    while(hd != NULL){
-        count++;
-        hd = hd->next;
-    }
-    return count;
-    }
+link LISTcons(Item n, link x){
+  link t = makeNew(n);
+  t->next = x;
+  return t;
 }
 
-void LISTprint(link hd){
-    if(hd == NULL)
-        return;
-    else{
-         printf("[");
-         printf("%d",hd->item);
-         while(hd->next != NULL){
-            hd = hd->next;
-            printf(",%d",hd->item);
-         }
-         printf("]\n");
+int LISTlength(link x){
+  int c = 0;
+  link t = x;
+  while(t != NULL){
+    c++;
+    t = t->next;
+  }
+   return c;
 }
+
+void LISTprint(link x){
+  link t = x;
+  printf("[");
+  while(t != NULL){
+    printf("%d ", t->item);
+     t = t->next;
+   }
+  printf("]\n");
 }
