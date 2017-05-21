@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
 #include "BTREE.h"
-
+#define max(x,y) ((x) > (y) ? (x) : (y))
 
 BTlink newNode(char c){
    BTlink head = malloc(sizeof(*head));
@@ -56,7 +57,7 @@ int BTsize(BTlink tr){
         if(tr->l==NULL&&tr->r==NULL){
             return 1;
 	 }
-        else 
+        else
             return BTsize(tr->l) + BTsize(tr->r);
    }
    else
@@ -125,4 +126,39 @@ char BTlabel(BTlink tr, link path){
    return '\0';
    break;
   }
+}
+
+link BTlongestPath(BTlink tr){
+    if(tr != NULL){
+            link leftPath = BTlongestPath(tr->l);
+            link rightPath = BTlongestPath(tr->r);
+            if(LISTlength(leftPath)>LISTlength(rightPath))
+                return LISTcons(LISTlength(leftPath), LISTcons(0,LISTempty()));
+            else
+                return LISTcons(LISTlength(rightPath), LISTcons(1,LISTempty()));
+    }
+    else
+        return LISTempty();
+
+}
+
+int BTheight(BTlink tr){
+    if (tr == NULL)
+        return -1;
+    else
+        return 1 + max(BTheight(tr->l),BTheight(tr->r));
+}
+
+int BTcheckComplete(BTlink tr){
+    if(tr->l!=NULL&&tr->r!=NULL)
+        return 1;
+    else
+        return BTcheckComplete(tr->l)&&BTcheckComplete(tr->r);
+}
+
+int BTcheckBalanced(BTlink tr){
+    if(tr == NULL)
+        return 1;
+    if(abs(BTheight(tr->l)-BTheight(tr->r))<=1)
+        return BTcheckBalanced(tr->l)&&BTcheckBalanced(tr->r);
 }

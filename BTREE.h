@@ -18,3 +18,7 @@ int BTisLeaf(BTlink, link);
 int BTleaves(BTlink);
 int BTedges(BTlink);
 char BTlabel(BTlink, link);
+link BTlongestPath(BTlink);
+int BTheight(BTlink);
+int BTcheckComplete(BTlink);
+int BTcheckBalanced(BTlink);
