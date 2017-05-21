@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "Item.h"
 #include "LIST.h"
 
@@ -18,6 +19,8 @@ Item LISThead(link hd){
 link LISTtail(link hd){
     if(hd->next!=NULL)
         return hd->next;
+    else
+	return NULL;
 }
 
 link LISTcons(Item n,link hd){
@@ -42,7 +45,7 @@ int LISTlength(link hd){
 
 void LISTprint(link hd){
     if(hd == NULL)
-        printf("No List");
+        return;
     else{
          printf("[");
          printf("%d",hd->item);

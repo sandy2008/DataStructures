@@ -3,7 +3,7 @@
 typedef struct BTnode* BTlink;
 
 struct BTnode{
-   char item;
+   char label;
    BTlink l;
    BTlink r;
 };  //Define BTlink
@@ -13,8 +13,8 @@ BTlink newNode(char);
 BTlink BTcons(char, BTlink, BTlink);
 BTlink BTsubtree(BTlink, link);
 void BTprint(BTlink);
-int BTsize(BTLink);
+int BTsize(BTlink);
 int BTisLeaf(BTlink, link);
-int BTLeaves(BTlink);
+int BTleaves(BTlink);
 int BTedges(BTlink);
 char BTlabel(BTlink, link);
