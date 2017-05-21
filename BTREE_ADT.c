@@ -1,11 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "BTREE.h"
-
+#include "LIST.h"
 
 BTlink newNode(char c){
    BTlink head = malloc(sizeof(*head));
-   head->item = c;
+   head->label = c;
    head->l = NULL;
    head->r = NULL;
    return head;
@@ -43,7 +43,7 @@ void BTprint(BTlink tr){
 	printf("Null");
 	return;
    }
-   printf("Node(%c, ",tr->item);
+   printf("Node(%c, ",tr->label);
    BTprint(tr->l);
    printf(", ");
    BTprint(tr->r);
@@ -61,4 +61,66 @@ int BTsize(BTlink tr){
         return 0;
 }
 
+int BTisLeaf(BTlink tr, link path){
+   if(path == NULL)
+	return 0;
+   switch(LISThead(path)){
+   case 0:
+   if(tr->l == NULL)
+	return 0;
+   if(tr->l->l == NULL&& tr->l->r == NULL)
+    return 1;
+   return BTisLeaf(tr->l, LISTtail(path));
+   break;
+   case 1:
+   if(tr->r == NULL)
+	return 0;
+   if(tr->r->l == NULL&& tr->r->r == NULL)
+    return 1;
+   return BTisLeaf(tr->r, LISTtail(path));
+   break;
+   default:
+   return 0;
+   break;
+  }
+}
 
+int BTLeaves(BTlink tr) {
+    int result = 0;
+    if (tr->l == NULL && tr->r == NULL)
+        result += 1;
+    if (tr->l != NULL)
+        result += BTLeaves(tr->l);
+    if (tr->r != NULL)
+        result += BTLeaves(tr->r);
+    return result;
+}
+
+int BTedges(BTlink tr) {
+    int result = 0;
+    if (tr->l != NULL)
+        result += BTLeaves(tr->l)+1;
+    if (tr->r != NULL)
+        result += BTLeaves(tr->r)+1;
+    return result;
+}
+
+char BTlabel(BTlink tr, link path){
+   if(path == NULL)
+	return tr->label;
+   switch(LISThead(path)){
+   case 0:
+   if(tr->l == NULL)
+	return "\0";
+   return BTisLeaf(tr->l, LISTtail(path));
+   break;
+   case 1:
+   if(tr->r == NULL)
+	return "\0";
+   return BTisLeaf(tr->r, LISTtail(path));
+   break;
+   default:
+   return "\0";
+   break;
+  }
+}
