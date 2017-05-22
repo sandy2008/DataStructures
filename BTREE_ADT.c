@@ -150,15 +150,19 @@ int BTheight(BTlink tr){
 }
 
 int BTcheckComplete(BTlink tr){
-    if(tr->l!=NULL&&tr->r!=NULL)
+    if(tr->l==NULL&&tr->r==NULL)
         return 1;
-    else
+    else if(tr->l!=NULL&&tr->r!=NULL)
         return BTcheckComplete(tr->l)&&BTcheckComplete(tr->r);
+    else
+	return 0;
 }
 
 int BTcheckBalanced(BTlink tr){
     if(tr == NULL)
         return 1;
-    if(abs(BTheight(tr->l)-BTheight(tr->r))<=1)
+    else if(abs(BTheight(tr->l)-BTheight(tr->r))<=1)
         return BTcheckBalanced(tr->l)&&BTcheckBalanced(tr->r);
+    else
+	return 0;
 }
