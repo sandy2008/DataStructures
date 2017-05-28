@@ -1,0 +1,5 @@
+result of path.c
+path = 126, counter = 251
+
+result of path2.c
+path = 126, counter = 81

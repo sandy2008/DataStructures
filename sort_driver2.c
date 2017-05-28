@@ -5,7 +5,7 @@
 
 int c = 0;
 
-void main(int argc, char *argv[]){
+int main(int argc, char *argv[]){
     int i, N = atoi(argv[1]), sw = atoi(argv[2]);
     int *a = malloc(N*sizeof(int));
     switch(sw){
@@ -20,11 +20,10 @@ void main(int argc, char *argv[]){
     default:
     for (i = 0; i < N; i++) a[i] = i; break;
 }
-    sort(a, 0, N-1);
     clock_t start = clock();//Timer Start
-    for (i = 0; i < N; i++) printf("%3d ", a[i]);
+    sort(a, 0, N-1);
     clock_t end = clock(); //Timer End
+    for (i = 0; i < N; i++) printf("%3d ", a[i]);
     printf("\n counter = %d\n",c);
-    float seconds = (float)(end - start);
-    printf("time = %.3lf\n",seconds);
+    printf("cpu time=%10.6f[sec]\n",(double)(end-start)/CLOCKS_PER_SEC);
 }

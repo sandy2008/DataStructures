@@ -1,5 +1,40 @@
-result of path.c
-path = 126, counter = 251
+selection sort
 
-result of path2.c
-path = 126, counter = 81
+N = 10000
+counter = 49995000
+cpu time=  0.140886[sec]
+
+N = 20000
+counter = 199990000
+cpu time=  0.549116[sec]
+
+N = 30000
+counter = 449985000
+cpu time=  1.233994[sec]
+
+insertion sort
+
+N = 10000
+counter = 24849412
+cpu time=  0.096071[sec]
+
+N = 20000
+counter = 100058533
+cpu time=  0.393109[sec]
+
+N = 30000
+counter = 224775520
+cpu time=  0.863781[sec]
+
+bubble sort
+N = 10000
+counter = 49995000
+cpu time=  0.307269[sec]
+
+N = 20000
+counter = 199990000
+cpu time=  1.338757[sec]
+
+N = 30000
+counter = 449985000
+cpu time=  3.111307[sec]

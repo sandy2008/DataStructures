@@ -8,6 +8,7 @@ void sort(Item a[], int left, int right){
         Item v = a[i];
         c++;
         while (less(v,a[j-1]) && left < j){
+            c++;
             a[j] = a[j-1];
             j--;
         }

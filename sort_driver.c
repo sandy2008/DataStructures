@@ -4,7 +4,7 @@
 
 int c = 0;
 
-void main(int argc, char *argv[]){
+int main(int argc, char *argv[]){
     int i, N = atoi(argv[1]), sw = atoi(argv[2]);
     int *a = malloc(N*sizeof(int));
     switch(sw){
