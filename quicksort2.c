@@ -3,17 +3,28 @@ extern int c;
 
 void sort(Item a[],int left,int right){
     int i;
-    if(right - left >9){
     if (right <= left) return;
+    if(right - left >9){
     i = partition(a,left,right);
     sort(a,left,i-1);
     sort(a,i+1,right);
-    }
+    }		
     else insertion(a,left,right);
 }
 
 int partition(Item a[],int left,int right){
-    Item pivot = a[(left+right)/2];
+    Item mid = a[(left+right)/2];
+    int piv;
+    Item pivot = (a[left] < a[mid] ? (a[mid] < a[right] ? a[mid] : a[left
+ < a[right] ? a[right] : a[left]) : (a[mid] > a[right] ? a[mid] : a[left] > a[right] ? a[right]
+: a[left]));
+    if(pivot == a[left])
+	piv = left;
+    if(pivot == a[mid])
+	piv = mid;
+    if(pivot == a[right])
+	piv = right;
+    exch(a[piv],a[right]);
     int i = left-1, j = right-1;
     while(1){
     while(less(a[++i],pivot));
