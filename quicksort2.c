@@ -2,9 +2,9 @@
 extern int c;
 
 int partition(Item a[],int left,int right){
-    Item mid = a[(left+right)/2];
+    Item mid = (left+right)/2;
     int piv;
-    Item pivot = (a[left] < a[mid] ? (a[mid] < a[right] ? a[mid] : a[left
+    Item pivot = (a[left] < a[mid] ? (a[mid] < a[right] ? a[mid] : a[left]
  < a[right] ? a[right] : a[left]) : (a[mid] > a[right] ? a[mid] : a[left] > a[right] ? a[right]
 : a[left]));
     if(pivot == a[left])
