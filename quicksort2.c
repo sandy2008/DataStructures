@@ -1,20 +1,6 @@
 #include "sort.h"
 extern int c;
 
-<<<<<<< HEAD
-void sort(Item a[],int left,int right){
-    int i;
-    if (right <= left) return;
-    if(right - left >9){
-    i = partition(a,left,right);
-    sort(a,left,i-1);
-    sort(a,i+1,right);
-    }		
-    else insertion(a,left,right);
-}
-=======
->>>>>>> origin/master
-
 int partition(Item a[],int left,int right){
     Item mid = a[(left+right)/2];
     int piv;
