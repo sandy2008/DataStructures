@@ -6,7 +6,7 @@ void mergeAB(Item tmp[], Item a[], int N, Item b[], int M){
     if (i == N) { tmp[k] = b[j++]; continue; }
     if (j == M) { tmp[k] = a[i++]; continue; }
     tmp[k] = (less(a[i], b[j])) ? a[i++] : b[j++];
-    ]
+    }
 }
 
 void merge(Item a[], int left, int mid, int right){
