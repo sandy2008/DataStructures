@@ -1,0 +1,149 @@
+sandy@alopex:~/DataStructures$ ./STclient_BST 10 0
+Original Symbol Table
+key = 61, info = Hello
+key = 277, info = Hello
+key = 290, info = Hello
+key = 498, info = Hello
+key = 575, info = Hello
+key = 627, info = Hello
+key = 719, info = Hello
+key = 745, info = Hello
+key = 788, info = Hello
+key = 864, info = Hello
+Length = 10, Keys = 10
+
+After insertion
+key = 61, info = Hello
+key = 277, info = Hello
+key = 290, info = Hello
+key = 300, info = New Item
+key = 498, info = Hello
+key = 575, info = Hello
+key = 627, info = Hello
+key = 719, info = Hello
+key = 745, info = Hello
+key = 788, info = Hello
+key = 864, info = Hello
+Input sKey: 61
+key = 61, info = Hello
+insert counter = 24, search counter = 3
+
+sandy@alopex:~/DataStructures$ ./STclient_BST 20 0
+Original Symbol Table
+key = 37, info = Hello
+key = 49, info = Hello
+key = 61, info = Hello
+key = 93, info = Hello
+key = 149, info = Hello
+key = 179, info = Hello
+key = 277, info = Hello
+key = 290, info = Hello
+key = 342, info = Hello
+key = 367, info = Hello
+key = 498, info = Hello
+key = 575, info = Hello
+key = 627, info = Hello
+key = 654, info = Hello
+key = 719, info = Hello
+key = 730, info = Hello
+key = 745, info = Hello
+key = 773, info = Hello
+key = 788, info = Hello
+key = 864, info = Hello
+Length = 20, Keys = 20
+
+After insertion
+key = 37, info = Hello
+key = 49, info = Hello
+key = 61, info = Hello
+key = 93, info = Hello
+key = 149, info = Hello
+key = 179, info = Hello
+key = 277, info = Hello
+key = 290, info = Hello
+key = 300, info = New Item
+key = 342, info = Hello
+key = 367, info = Hello
+key = 498, info = Hello
+key = 575, info = Hello
+key = 627, info = Hello
+key = 654, info = Hello
+key = 719, info = Hello
+key = 730, info = Hello
+key = 745, info = Hello
+key = 773, info = Hello
+key = 788, info = Hello
+key = 864, info = Hello
+Input sKey: 864
+key = 864, info = Hello
+insert counter = 63, search counter = 7
+
+sandy@alopex:~/DataStructures$ ./STclient_BST 30 0
+Original Symbol Table
+key = 2, info = Hello
+key = 37, info = Hello
+key = 49, info = Hello
+key = 61, info = Hello
+key = 63, info = Hello
+key = 93, info = Hello
+key = 149, info = Hello
+key = 179, info = Hello
+key = 210, info = Hello
+key = 277, info = Hello
+key = 290, info = Hello
+key = 296, info = Hello
+key = 315, info = Hello
+key = 342, info = Hello
+key = 367, info = Hello
+key = 391, info = Hello
+key = 498, info = Hello
+key = 569, info = Hello
+key = 572, info = Hello
+key = 575, info = Hello
+key = 627, info = Hello
+key = 630, info = Hello
+key = 654, info = Hello
+key = 719, info = Hello
+key = 730, info = Hello
+key = 745, info = Hello
+key = 767, info = Hello
+key = 773, info = Hello
+key = 788, info = Hello
+key = 864, info = Hello
+Length = 30, Keys = 30
+
+After insertion
+key = 2, info = Hello
+key = 37, info = Hello
+key = 49, info = Hello
+key = 61, info = Hello
+key = 63, info = Hello
+key = 93, info = Hello
+key = 149, info = Hello
+key = 179, info = Hello
+key = 210, info = Hello
+key = 277, info = Hello
+key = 290, info = Hello
+key = 296, info = Hello
+key = 300, info = New Item
+key = 315, info = Hello
+key = 342, info = Hello
+key = 367, info = Hello
+key = 391, info = Hello
+key = 498, info = Hello
+key = 569, info = Hello
+key = 572, info = Hello
+key = 575, info = Hello
+key = 627, info = Hello
+key = 630, info = Hello
+key = 654, info = Hello
+key = 719, info = Hello
+key = 730, info = Hello
+key = 745, info = Hello
+key = 767, info = Hello
+key = 773, info = Hello
+key = 788, info = Hello
+key = 864, info = Hello
+Input sKey: 864
+key = 864, info = Hello
+insert counter = 114, search counter = 7

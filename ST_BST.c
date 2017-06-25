@@ -3,6 +3,8 @@
 typedef struct STnode* link;
 struct STnode { STitem item; link l, r; int N; };
 static link head, pointNULL;
+extern int cnt1, cnt2;
+
 link makeNEW(STitem c,link left,link right,int num){
 link x = malloc(sizeof *x);
 x->item = c; x->l = left; x->r = right; x->N = num;
@@ -13,15 +15,6 @@ pointNULL = makeNEW(NULLitem,NULL,NULL,0);
 head = pointNULL;
 }
 int STcount(void) { return head->N; }
-STitem searchBST(link h, Key v){
-Key t = key(h->item);
-if(h == pointNULL) return NULLitem;
-if(++cnt2 && eq(v,t)) return h->item;
-if(++cnt2 && less(v,t))
-return searchBST(h->l, v);
-else return searchBST(h->r, v);
-}
-STitem STsearch(Key v){ return searchBST(head, v); }
 STitem searchBST(link h, Key v){
 Key t = key(h->item);
 if(h == pointNULL) return NULLitem;
