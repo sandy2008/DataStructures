@@ -1,6 +1,5 @@
-random counter = 16842
-sorted counter = 17626
-random counter = 37654
-sorted counter = 39190
-random counter = 60338
-sorted counter = 62918
+DHL
+-ABC
+-EFG
+-IJK
+-MNO
