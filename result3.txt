@@ -1,0 +1,27 @@
+sandy@alopex:~/DataStructures$ ./ST_HASH3
+Resulting Symbol Table
+key = -1, info = NULL
+key = -1, info = NULL
+key = -1, info = NULL
+key = -1, info = NULL
+key = 4, info = NULL
+key = 5, info = NULL
+key = 26, info = NULL
+key = 87, info = NULL
+key = -1, info = NULL
+key = 24, info = NULL
+key = -1, info = NULL
+key = 25, info = NULL
+key = -1, info = NULL
+key = 13, info = NULL
+key = 44, info = NULL
+key = 35, info = NULL
+key = -1, info = NULL
+key = -1, info = NULL
+key = 38, info = NULL
+key = -1, info = NULL
+
+Search 44
+key = 44, info = NULL
+Rehashing 4-times (insertion)
+Rehashing 2-times (searching)
